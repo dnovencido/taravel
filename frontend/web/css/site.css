@@ -1,0 +1,225 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.navbar {
+    border-radius: 0px !important;
+    margin-bottom: 0px;
+}
+a {
+    cursor: pointer;
+}
+.navbar-inverse {
+   /* background-color: #37474F !important;
+    border-color: #37474F !important;*/
+    background-color: #FFF !important;
+    border-color: #FFF!important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.6),0 2px 10px 0 rgba(0,0,0,0.19); 
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #000 !important;
+/*    //background-color: #080808;*/
+    background-color: #FFF !important;
+    border-bottom: 2px solid !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #000 !important;
+}
+
+.wrap > .container {
+    padding: 20px 15px 20px !important;
+}
+
+.banner-site {
+    max-width:100%;
+    background-color: #546E7A;
+}
+
+.jumbotron > h1 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);  
+}
+
+.card-footer {
+    border-top: 1px solid #BFBFBF;
+    padding: 10px;
+}
+
+#myCarousel {
+    min-height: 400px;
+}
+
+.line-right {
+    border: 1px solid;
+    height: 10px;
+}
+
+.title-destination-list {
+    margin-top: 0px;
+}
+
+.ctr-link-buttons {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+}
+
+.search-packages-list {
+    padding: 10px;
+    min-height: 160px;
+    margin-top: 10px;
+    border-bottom: 1px solid #CFD8DC;
+/*    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);  */
+}
+
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+    -webkit-transition: all 0.21 ease-in-out;
+    -moz-transition: all 0.21s ease-in-out;
+    -ms-transition: all 0.21s ease-in-out;
+    -o-transition: all 0.21s ease-in-out;
+    outline: none;
+    border: 2px solid #DDDDDD    
+}
+
+input[type=text]:focus {
+  /*  box-shadow: 0 0 5px rgba(81, 203, 238, 1);*/
+    border: 2px solid rgba(81, 203, 238, 1);
+}
+
+.search-button {
+    margin-top: 10px;
+}
+
+.auth-clients-holder {
+    display: inline-block;
+    vertical-align: top;
+}
