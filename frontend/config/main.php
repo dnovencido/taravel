@@ -17,8 +17,8 @@ return [
             'clients' => [
                 'google' => [
                     'class' => 'yii\authclient\clients\Google',
-                    'clientId' => 'google_client_id',
-                    'clientSecret' => 'google_client_secret',
+                    'clientId' => '1068916326692-l0k0p2ukdleqot1teqcog80nvop72740.apps.googleusercontent.com',
+                    'clientSecret' => 'BglQSoiVyFXGQc59p0e8w5ko',
                 ],
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
@@ -56,7 +56,11 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,          
             'rules' => [
+                '<_c:[\w\-]+>' => '<_c>/index',
+                '<_c:[\w\-]+>/<_a:[\w\-]+>' => '<_c>/<_a>',
+                '<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_c>/<_a>',
             ],
         ],
         

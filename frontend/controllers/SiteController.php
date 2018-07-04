@@ -12,7 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use app\common\components\AuthHandler;
+use common\components\AuthHandler;
 
 /**
  * Site controller

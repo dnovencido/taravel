@@ -23,8 +23,9 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
+    const STATUS_INSERTED = 0;
+    const STATUS_ACTIVE = 1;
+    const STATUS_BLOCKED = 2;
 
 
     /**
@@ -52,9 +53,22 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INSERTED]],
         ];
     }
+
+    // public function rules()
+    // {
+    //     return [
+    //         [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
+    //         [['status', 'created_at', 'updated_at'], 'integer'],
+    //         [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
+    //         [['auth_key'], 'string', 'max' => 32],
+    //         [['username'], 'unique'],
+    //         [['email'], 'unique'],
+    //         [['password_reset_token'], 'unique'],
+    //     ];
+    // }
 
     /**
      * {@inheritdoc}
@@ -186,4 +200,12 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAuths()
+    {
+        return $this->hasMany(Auth::className(), ['user_id' => 'id']);
+    }    
 }
